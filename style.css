@@ -1,0 +1,214 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display : flex;
+    margin : 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top : 7%;
+}
+.head{
+    width: 44%;
+    height: auto;
+    border-radius: 15px 15px 15px 15px;
+    border : 5px groove rgb(173, 162, 255);
+    background-color: rgb(249, 252, 251);
+    opacity: 0.7;
+    display:flex;
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: center;
+    padding:10px 0 10px 0;
+    position:relative;
+}
+body{
+    background-image: url('./imgs/background2.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: 50% 32%;
+    
+}
+
+.choice{
+    width: 100%;
+    display : flex;
+    height : auto;
+    flex-direction: row;
+    justify-content: space-around;
+}
+ #btn1{
+    width: 20%;
+    height: auto;
+    line-height: 40px;
+    margin-bottom: 15px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(33, 191, 115);
+    font-size: 95%;
+    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
+ }
+ #btn2{
+    width: 20%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px 10px 10px 10px;
+    background-color:  rgb(253, 94, 83);
+    font-size: 95%;
+    color : white;
+    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
+ }
+
+ h4{
+    font-family: Papyrus,fantasy;
+    font-size: 140%;
+    height : auto;
+    width: 100%;
+    text-align: center;
+    color : #09007f;
+ }
+
+ h3{
+    font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
+    font-size : 170%;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color : #09007f;
+ }
+
+ ion-icon{
+    color:rgb(253, 94, 83);
+ }
+ .forBtn2{
+    width: 47%;
+    height : auto;
+    /* border : 5px groove red; */
+    border-radius: 15px 15px 15px 15px;
+ }
+ video{
+    width: 47%;
+    object-fit: cover;
+    border-radius: 15px 15px 15px 15px;
+ }
+ .forBtn2 video{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 15px 15px;
+ }
+
+ .forBtn1{
+    max-width: 95%;
+    height : auto;
+    display : flex;
+    flex-direction: row;
+    column-gap: 5px;
+    justify-content: center;
+    padding-top : 4%;
+    
+ }
+
+ .card1{
+    border-radius: 15px 15px 15px 15px;
+    /* border : 5px groove  red; */
+    transform : rotate(345deg);
+    opacity: 0.9;
+    animation-name: spin;
+    animation-duration: 3s;
+    width : 45%;
+    height : auto;
+    
+ }
+
+ .card2{
+    border-radius: 15px 15px 15px 15px;
+    /* border : 5px groove red; */
+    transform : rotate(15deg);
+    opacity: 0.8;
+    animation-name: spin-left;
+    animation-duration: 3s;
+    width: 45%;
+    height : auto;
+ }
+ .card1 video{
+   transform : rotate(360deg);
+   width: 100%;
+   height : 100%;
+   object-fit: cover;
+ }
+ .card2 video{
+   transform : rotate(0deg);
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+ @keyframes spin{
+   from{
+      transform : rotate(0deg);
+      opacity : 0.4;
+   }
+   to{
+      transform : rotate(345deg);
+      opacity : 0.9;
+   }
+ }
+
+ @keyframes drop{
+   from{
+      transform : scaleY(3);
+      opacity : 0.4;
+      transform : rotate(15deg);
+   }
+   to{transform : scaleY(1);
+      opacity : 0.4;
+      transform : rotate(15deg);}
+      
+ }
+ @keyframes spin-left{
+   from{
+      transform :rotate(360deg);
+      opacity : 0.4;
+   }
+   to{
+      transform : rotate(15deg);
+      opacity : 0.8;
+   }
+ }
+ .gradient-border {
+   --borderWidth: 3px;
+   position: relative;
+   border-radius: var(--borderWidth);
+ }
+ .gradient-border:after {
+   content: '';
+   position: absolute;
+   top: calc(-1 * var(--borderWidth));
+   left: calc(-1 * var(--borderWidth));
+   height: calc(100% + var(--borderWidth) * 2);
+   width: calc(100% + var(--borderWidth) * 2);
+   background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+   border-radius: 15px 15px 15px 15px;
+   z-index: -1;
+   animation: animatedgradient 3s ease alternate infinite;
+   background-size: 300% 300%;
+ }
+ 
+ 
+ @keyframes animatedgradient {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
